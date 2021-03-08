@@ -20,6 +20,26 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 def index():
     return render_template('index.html')
 
+@app.route('/certificates', methods=['GET', 'POST'])
+def certificates():
+    return render_template('certificates.html')
+
+@app.route('/projects', methods=['GET', 'POST'])
+def projects():
+    return render_template('projects.html')
+
+@app.route('/gallery', methods=['GET', 'POST'])
+def gallery():
+    return render_template('gallery.html')
+
+@app.route('/resume', methods=['GET', 'POST'])
+def resume():
+    return render_template('resume.html')
+
+@app.route('/contact', methods=['GET', 'POST'])
+def contact():
+    return render_template('contact.html')
+
 # MAIN
 if __name__=='__main__':
     app.run(debug=True)

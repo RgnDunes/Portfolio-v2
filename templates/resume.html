@@ -1,0 +1,52 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='resume.css')}}">
+    <title>rgndunes</title>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars">+</i>
+        </label>
+        <label class="logo">rgndunes</label>
+        <ul>
+            <li><a href="/" class="active rgndunes">rgndunes</a></li>
+            <li><a href="/certificates">Cerifications</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/resume">Resume</a></li>
+            <li><a href="/contact">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    <!-- BODY -->
+    <div class="section">
+        <div class="resumeHeader">
+            My Resume
+            <div class="moreProjects">
+                <a href="../static/files/Resume.pdf" download target="_blank"><button class="btn btnOfferLetter">Download</button></a>
+            </div>
+        </div>
+        <div class="container">
+            <embed src="../static/files/Resume.pdf#toolbar=0" type="application/pdf">
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer_bottom">
+            Copyright &copy; rgndunes. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+
+</html>

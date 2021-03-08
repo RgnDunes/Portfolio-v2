@@ -1,0 +1,233 @@
+body {
+    background-color: black;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+
+/* NAVBAR */
+
+nav {
+    background: #000;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 4;
+    border-bottom: 2px solid blueviolet;
+}
+
+label.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 22px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a.active,
+a:hover {
+    font-size: 22px;
+    transition: .5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media(max-width: 952px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 858px) {
+    .checkbtn {
+        transition: all 0.5s;
+        display: block;
+    }
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #181818;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    a:hover,
+    a.active {
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked~ul {
+        left: 0;
+    }
+    #check:checked~.checkbtn {
+        display: block;
+        transform: rotate(45deg);
+        transition: all 0.5s;
+    }
+}
+
+.rgndunes {
+    text-transform: lowercase;
+}
+
+
+/* BODY */
+
+.section {
+    margin: 0 20px;
+    margin-top: 10%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 24px;
+}
+
+.heading {
+    color: #A1A1A6;
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.cards {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card {
+    padding: 20px;
+    margin-top: 5%;
+    margin-right: 20px;
+    border-radius: 24px;
+}
+
+.card:nth-child(1) {
+    margin-left: 20px;
+}
+
+.card:nth-child(3) {
+    margin-right: 20px;
+}
+
+.certHeading {
+    font-size: 21px;
+    color: aqua;
+    font-weight: 500;
+}
+
+.globalshala img {
+    width: 100%;
+    height: auto;
+}
+
+.hashCode img {
+    width: 103%;
+    height: auto;
+}
+
+.hpBasic img {
+    width: 101%;
+    height: auto;
+}
+
+.hpsIntermediate img {
+    width: 101%;
+    height: auto;
+}
+
+.hpsBasic img {
+    width: 101%;
+    height: auto;
+}
+
+.microsoft img {
+    width: 101%;
+    height: auto;
+}
+
+.ui_ux img {
+    width: 110%;
+    height: auto;
+}
+
+@media(min-width:783px) {
+    .cards {
+        display: flex;
+    }
+    .card {
+        width: 50%;
+    }
+}
+
+
+/* FOOTER */
+
+footer {
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    background: #181818;
+    line-height: 1.4211;
+    letter-spacing: .012em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #A1A1A6;
+}
+
+.footer_bottom {
+    padding: 10px;
+    background: #000;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 70px;
+    text-align: center;
+}
