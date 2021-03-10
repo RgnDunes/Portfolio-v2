@@ -22,33 +22,6 @@ body {
     color: #A1A1A6;
 }
 
-.row {
-    display: flex;
-}
-
-.heading {
-    font-size: 25px;
-    /* text-align: left; */
-    background-color: #181818;
-    padding: 10px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.coin {
-    width: 25%;
-}
-
-.coin img {
-    width: 100%;
-}
-
-.coin p {
-    font-size: 17px;
-    margin-top: -5%;
-    color: #fff;
-}
-
 .switch {
     display: flex;
     align-items: center;
@@ -82,6 +55,18 @@ a {
     column-count: 4;
     padding: 20px;
     background: #A1A1A6;
+}
+
+.coinSection {
+    font-size: 27px;
+    color: #A1A1A6;
+}
+
+.containerCoin {
+    position: relative;
+    column-count: 4;
+    padding: 20px;
+    background: #000;
 }
 
 .image {
@@ -126,10 +111,16 @@ h1 {
     .containerMob {
         column-count: 3;
     }
+    .containerCoin {
+        column-count: 3;
+    }
 }
 
 @media screen and (max-width:425px) {
     .containerMob {
+        column-count: 2;
+    }
+    .containerCoin {
         column-count: 2;
     }
     h1 {
@@ -139,6 +130,9 @@ h1 {
 
 @media screen and (max-width:375px) {
     .containerMob {
+        column-count: 1;
+    }
+    .containerCoin {
         column-count: 1;
     }
     h1 {
@@ -188,15 +182,6 @@ h1 {
     }
     .switch {
         font-size: 23px;
-    }
-}
-
-@media(max-width:395px) {
-    .row {
-        column-count: 3;
-    }
-    .coin p {
-        font-size: 12px;
     }
 }
 
@@ -330,8 +315,8 @@ a:hover {
         width: 100%;
         height: 100vh;
         background: #181818;
-        top: 80px;
-        left: -100%;
+        top: 67px;
+        left: -120%;
         text-align: center;
         transition: all 0.5s;
     }
