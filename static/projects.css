@@ -21,12 +21,61 @@ nav {
     border-bottom: 2px solid blueviolet;
 }
 
-label.logo {
+.logo img {
     color: white;
     font-size: 35px;
     line-height: 80px;
     padding: 0 100px;
     font-weight: bold;
+    width: 4.3%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@media(max-width:1517px) {
+    .logo img {
+        width: 5%;
+        height: auto;
+    }
+}
+
+@media(max-width:963px) {
+    .logo img {
+        width: 7%;
+        height: auto;
+    }
+}
+
+@media(max-width:721px) {
+    .logo img {
+        width: 9%;
+        height: auto;
+    }
+}
+
+@media(max-width:603px) {
+    .logo img {
+        width: 12%;
+        height: auto;
+    }
+}
+
+@media(max-width:433px) {
+    .logo img {
+        width: 15%;
+        height: auto;
+    }
+}
+
+@media(max-width:363px) {
+    .logo img {
+        /* margin-top: 0; */
+        padding: 0;
+        width: 19%;
+        height: auto;
+    }
 }
 
 nav ul {
@@ -125,7 +174,7 @@ a:hover {
 /* BODY */
 
 .section {
-    display: flex;
+    /* display: flex; */
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -175,6 +224,7 @@ a:hover {
     align-items: center;
     justify-content: center;
     display: flex;
+    width: 100%;
     /* padding-right: 20px; */
 }
 
@@ -229,6 +279,64 @@ a:hover {
 
 .btnOfferLetter:hover::before {
     height: 180%;
+}
+
+@media(max-width:1385px) {
+    .projHeader {
+        margin-top: 12%;
+    }
+}
+
+@media(max-width:1231px) {
+    .projHeader {
+        margin-top: 15%;
+    }
+}
+
+@media(max-width:1023px) {
+    .projHeader {
+        margin-top: 18.5%;
+    }
+}
+
+@media(min-width:713px) {
+    .section {
+        display: flex;
+    }
+}
+
+@media(max-width:713px) {
+    .section {
+        margin: 0;
+        margin-bottom: -30%;
+    }
+    .card {
+        width: 90%;
+        margin-top: 5%;
+    }
+    .card:nth-child(2) {
+        margin-left: 30px;
+    }
+    .card:nth-child(1) {
+        margin-left: 30px;
+    }
+    .part2 {
+        margin-top: 15%;
+    }
+    .projHeader {
+        margin-bottom: -10%;
+    }
+}
+
+@media(max-width:479px) {
+    .projHeader {
+        font-size: 30px;
+        margin-top: 25%;
+        margin-left: 5%;
+    }
+    .section {
+        margin-left: 2.5%;
+    }
 }
 
 

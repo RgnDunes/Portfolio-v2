@@ -20,12 +20,61 @@ nav {
     border-bottom: 2px solid blueviolet;
 }
 
-label.logo {
+.logo img {
     color: white;
     font-size: 35px;
     line-height: 80px;
     padding: 0 100px;
     font-weight: bold;
+    width: 4.3%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@media(max-width:1517px) {
+    .logo img {
+        width: 5%;
+        height: auto;
+    }
+}
+
+@media(max-width:963px) {
+    .logo img {
+        width: 7%;
+        height: auto;
+    }
+}
+
+@media(max-width:721px) {
+    .logo img {
+        width: 9%;
+        height: auto;
+    }
+}
+
+@media(max-width:603px) {
+    .logo img {
+        width: 12%;
+        height: auto;
+    }
+}
+
+@media(max-width:433px) {
+    .logo img {
+        width: 15%;
+        height: auto;
+    }
+}
+
+@media(max-width:363px) {
+    .logo img {
+        /* margin-top: 0; */
+        padding: 0;
+        width: 19%;
+        height: auto;
+    }
 }
 
 nav ul {
@@ -265,7 +314,7 @@ a:hover {
         background: #000;
         text-align: center;
         position: absolute;
-        top: 0;
+        top: 10%;
         bottom: 0;
         left: 0;
         right: 0;

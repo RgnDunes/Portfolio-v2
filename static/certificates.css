@@ -16,12 +16,61 @@ nav {
     border-bottom: 2px solid blueviolet;
 }
 
-label.logo {
+.logo img {
     color: white;
     font-size: 35px;
     line-height: 80px;
     padding: 0 100px;
     font-weight: bold;
+    width: 4.3%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@media(max-width:1517px) {
+    .logo img {
+        width: 5%;
+        height: auto;
+    }
+}
+
+@media(max-width:963px) {
+    .logo img {
+        width: 7%;
+        height: auto;
+    }
+}
+
+@media(max-width:721px) {
+    .logo img {
+        width: 9%;
+        height: auto;
+    }
+}
+
+@media(max-width:603px) {
+    .logo img {
+        width: 12%;
+        height: auto;
+    }
+}
+
+@media(max-width:433px) {
+    .logo img {
+        width: 15%;
+        height: auto;
+    }
+}
+
+@media(max-width:363px) {
+    .logo img {
+        /* margin-top: 0; */
+        padding: 0;
+        width: 19%;
+        height: auto;
+    }
 }
 
 nav ul {
@@ -203,6 +252,67 @@ a:hover {
     }
     .card {
         width: 50%;
+    }
+}
+
+@media(max-width:695px) {
+    .section {
+        margin-top: 15%;
+    }
+    .heading {
+        color: #A1A1A6;
+        font-size: 36px;
+        font-weight: 600;
+    }
+}
+
+@media(max-width:463px) {
+    .section {
+        margin-top: 21%;
+    }
+    .heading {
+        color: #A1A1A6;
+        font-size: 21px;
+        font-weight: 600;
+    }
+    .globalshala img {
+        width: 120%;
+        height: auto;
+    }
+    .hashCode img {
+        width: 120%;
+        height: auto;
+    }
+    .hpBasic img {
+        width: 120%;
+        height: auto;
+    }
+    .hpsIntermediate img {
+        width: 120%;
+        height: auto;
+    }
+    .hpsBasic img {
+        width: 120%;
+        height: auto;
+    }
+    .microsoft img {
+        width: 120%;
+        height: auto;
+    }
+    .ui_ux img {
+        width: 120%;
+        height: auto;
+    }
+    .certHeading {
+        font-size: 15px;
+        color: aqua;
+        font-weight: 500;
+    }
+}
+
+@media(min-width:867px) and (max-width:1363px) {
+    .section {
+        margin-top: 16%;
     }
 }
 
