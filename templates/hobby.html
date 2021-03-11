@@ -18,7 +18,7 @@
         </label>
         <label class="logo"><img src="../static/logo/halfLogoPortfolioV2Removebg.png" alt=""></label>
         <ul>
-            <li><a href="/" class="active rgndunes">rgndunes</a></li>
+            <li><a href="/" class="active">Home</a></li>
             <li><a href="/certificates">Certifications</a></li>
             <li><a href="/projects">Projects</a></li>
             <li><a href="/hobby">Hobby</a></li>
@@ -30,11 +30,11 @@
     <!-- BODY -->
     <div class="container">
         <div class="switch">
-            <div class="item">
-                <a href="#coins">Coin Collection</a>
+            <div class="item coinItem" id="coinItem">
+                <a href="#" onClick="coinClicked()">Coin Collection</a>
             </div>
-            <div class="item">
-                <a href="#mobPhotography">Mobile Photography</a>
+            <div class="item mobPhotoItem" id="mobPhotoItem">
+                <a href="#" onClick="mobClicked()">Mobile Photography</a>
             </div>
         </div>
         <hr style="height:2px;border-width:0;background-color:blueviolet;border-radius:50%;width:70%;" /><br/>
@@ -216,7 +216,7 @@
             </div>
         </div>
 
-        <hr style="height:2px;border-width:0;background-color:blueviolet;border-radius:50%;width:90%;" /><br/>
+        <!-- <hr style="height:2px;border-width:0;background-color:blueviolet;border-radius:50%;width:90%;" /><br/> -->
 
         <div class="mobPhotography" id="mobPhotography">
             <div class="containerMob">
@@ -298,6 +298,38 @@
             Copyright &copy; rgndunes. All rights reserved.
         </div>
     </footer>
+
+    <script>
+        const coinDiv = document.getElementById("coins");
+        const mobDiv = document.getElementById("mobPhotography");
+
+        const coinItem = document.getElementById("coinItem");
+        const mobPhotoItem = document.getElementById("mobPhotoItem");
+
+        const coinItem_a = coinItem.getElementsByTagName("a");
+        const mobPhotoItem_a = mobPhotoItem.getElementsByTagName("a");
+
+        coinDiv.style.display = "block";
+        mobDiv.style.display = "none";
+
+        function coinClicked() {
+            // console.log("coinClicked");
+            coinDiv.style.display = "block";
+            mobDiv.style.display = "none";
+            coinItem_a.style.color = "#0033FF";
+            mobPhotoItem_a.style.color = "blueviolet";
+
+        }
+
+        function mobClicked() {
+            // console.log("mobClicked");
+            mobDiv.style.display = "block";
+            coinDiv.style.display = "none";
+            mobPhotoItem_a.style.color = "#0033FF";
+            coinItem_a.style.color = "blueviolet";
+
+        }
+    </script>
 
 </body>
 
