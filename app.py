@@ -14,6 +14,12 @@ db = SQLAlchemy(app)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # DATABASE MODELS
+class Contact(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String(120), unique=False, nullable=False)
+    subject = db.Column(db.String(250), unique=False, nullable=False)
+    message = db.Column(db.String(500), unique=False, nullable=False)
+    date = db.Column(db.String(50), unique=False, nullable=False)
 
 # FLASKFORM
 
@@ -50,31 +56,39 @@ def sendingFeedback():
         msg = request.form.get('message')
         today = date.today()
         curr_date = today.strftime("%B %d, %Y")
-        port = 465  # For SSL
-        smtp_server = "smtp.gmail.com"
-        receiver_email = email  # Enter receiver address
-        sender_email = "testingdunes@gmail.com"  # Enter your address
-        password = "Duqo&@5200"
-        message = """\
-        Subject: Thank you for the feedback.
 
-        We will reach out to you soon."""
+        contactInfo = Contact(email=email, subject=subject, message=msg, date=str(curr_date))
+        db.session.add(contactInfo)
+        db.session.commit()
 
-        context = ssl.create_default_context()
-        with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
-            server.login(sender_email, password)
-            server.sendmail(sender_email, receiver_email, message)
-        
-        receiver_email = "testingdunes@gmail.com"
-        message = """\
-        Subject: Portfolio-v2.
+        try:
+            port = 465  # For SSL
+            smtp_server = "smtp.gmail.com"
+            receiver_email = email  # Enter receiver address
+            sender_email = "testingdunes@gmail.com"  # Enter your address
+            password = "Duqo&@5200"
+            message = """\
+            Subject: Thank you for the feedback.
 
-Feedback from """ + email + """. \nMessage : """ + msg + """"\nDate : """ + curr_date
+            We will reach out to you soon."""
 
-        context = ssl.create_default_context()
-        with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
-            server.login(sender_email, password)
-            server.sendmail(sender_email, receiver_email, message)
+            context = ssl.create_default_context()
+            with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
+                server.login(sender_email, password)
+                server.sendmail(sender_email, receiver_email, message)
+            
+            receiver_email = "testingdunes@gmail.com"
+            message = """\
+            Subject: Portfolio-v2.
+
+Feedback from """ + email + """. \nMessage : """ + msg + """\nDate : """ + curr_date
+
+            context = ssl.create_default_context()
+            with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
+                server.login(sender_email, password)
+                server.sendmail(sender_email, receiver_email, message)
+        except:
+            return render_template('index.html')
     return render_template('index.html')
 
 # MAIN
